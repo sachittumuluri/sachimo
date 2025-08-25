@@ -1,0 +1,23 @@
+{
+  "name": "one-line-a-day",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.56.0",
+    "next": "^14.2.32",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.11",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.39",
+    "tailwindcss": "3.4.10",
+    "typescript": "5.5.4"
+  }
+}
