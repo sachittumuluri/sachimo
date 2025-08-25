@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import { supabase } from '@/lib/supabaseClient'
 
 type MoodKey = 'great' | 'good' | 'ok' | 'meh' | 'rough'
@@ -312,7 +312,7 @@ export default function Journal() {
               {(() => {
                 const start = new Date(new Date().getFullYear(), new Date().getMonth(), 1)
                 const end = new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0)
-                const nodes: JSX.Element[] = []
+                const nodes: ReactNode[] = []
                 for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
                   const k = d.toISOString().slice(0, 10)
                   const todays = entries.filter((e) => e.date === k)
